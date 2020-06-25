@@ -1,0 +1,74 @@
+.carousel{
+    background: #2f4357;
+    box-shadow: 0px 1px 12px 6px lightslategrey;
+    /* margin-top: 20px; */
+}
+.carousel-item{
+    text-align: center;
+    min-height: 140px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.bs-example{
+	margin: 20px;
+}
+
+.header{
+    background-color: #000;
+    color: #fff;
+    height: 54px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .deloitte-log{
+    display: inline-block;
+    padding: 0 25px;
+    margin: 9px 0;
+  }
+
+
+  .cardDetail{
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px lightslategrey;
+    width: 25.2%;
+    box-shadow: 0px 6px 12px 6px lightslategrey;
+    float: left;
+    margin: 3% 0%;
+    min-height: 341px;
+    padding: 30px;
+    background: #064b4b;
+    color: antiquewhite;
+  }
+
+  .startLinkSpan:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+  }
+
+  .startLinkSpan{
+      clear: both;
+      margin: 0% 0% 3% 45%;
+  }
+
+  .startLink{
+    margin-bottom: 15px;
+  }
+
+  .inputCssDependencies{
+    height: 2em;
+    min-width: 15em;
+  }
+
+  .level{
+    display: block;
+    width: 6em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
+    padding-right: 29%;
+    font-size: xx-small;
+  }

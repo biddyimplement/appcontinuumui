@@ -1,0 +1,398 @@
+.example-container {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .example-list {
+    min-height: 60px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .example-box:hover {
+    color: black;
+    background: #007cbb;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  .example-box {
+    height: 35px;
+    border-bottom: solid 1px #ccc;
+    color: white;
+    /* background: ; */
+    background:cadetblue;
+    display: flex;
+    padding-left: 12px ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  buttonContainer:hover {
+    background-color: maroon;
+  }
+
+  .left-nav-heading{
+    background: #333333;
+    padding: 10px 0px 10px 20px;
+    font-size: larger;
+    font-weight: 500;
+    /* position: fixed; */
+    width: inherit  ;
+    color: aliceblue;
+  }
+
+  .inputCss{
+    height: 1.3em;
+    width: 93%;
+    border:0.5px;
+  }
+
+  .inputCssDependencies{
+    height: 1.3em;
+    width:97%;
+    border:0.5px;
+  }
+
+  .level{
+    width:inherit;
+  }
+
+
+  /* .example-box-right.cdk-drag:hover {
+    background: #2581c15e;
+    color:black;
+  } */
+
+  .example-box-right {
+    /* max-width: 200px; */
+    margin: 5px;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 70px;
+    height: 56px;
+    /* border: 1px solid grey; */
+    padding: 6px;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: cadetblue;
+    font-size: 10px;
+    position: relative;
+   }
+
+   .closeIcon{
+    position: absolute;
+    top: 2px;
+    margin-bottom: 2px;
+    right: 3px;
+    display: none;
+   }
+
+   .example-box-right:hover{
+    background: #2c088170;
+    color:black;
+   }
+
+   .example-box-right:hover .closeIcon{
+    display: block;
+    background: #6c1717cc;
+    color: antiquewhite;
+    padding: 2px;
+    border-radius: 10px;
+   }
+  
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-box:last-child {
+    border: none;
+  }
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    /* border-radius: 8px; */
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c4d3e970; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+    cursor: pointer;
+  }
+  
+  .header{
+    background-color: #000;
+    color: #fff;
+    height: 54px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .deloitte-log{
+    display: inline-block;
+    padding: 0 25px;
+    margin: 9px 0;
+  }
+
+  .trapezoid {
+    border-bottom: 50px solid #555;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100%;
+  }
+
+  .truck-icon{
+    font-size: 70px;
+    padding: 1px;
+    border: 0.5px solid lightslategrey;
+    border-radius: 12px;
+    /* background: aliceblue; */
+    box-shadow: 63px;
+    box-shadow: 5px 10px 8px #888888;
+    position: relative;
+  }
+
+  .truck-icon:hover{
+    /* font-size: 75px; */
+    /* padding: 4px;
+    border: 0.5px solid rgb(28, 124, 219);
+    border-radius: 15px;
+    background: aliceblue;
+    box-shadow: 80px;
+    box-shadow: 10px 20px 18px #888888; */
+    /* position: relative; */
+  }
+  
+  .close{
+    position: absolute;
+    margin-left: 58px;
+    z-index: 121214;
+    margin-top: 3px;
+    font-size:1em;
+   }
+
+   .close:hover{
+    position: absolute;
+    margin-left: 57px;
+    z-index: 121214;
+    border: 1px solid lightslategrey;
+    background: #99409361;
+    border-radius: 32px;
+    margin-top: 3px;
+    box-shadow: 1px 0px 0px 0px lightslategrey;
+   }
+
+   .truckContainer{
+    width: fit-content;
+    float: left;
+    margin-left: 9px;
+    margin-bottom: 10px;
+   }
+
+   .truckContainer:hover{
+    cursor: pointer;
+   }
+
+   .application-level{
+    position: absolute;
+    z-index: 12241;
+    margin-top: 25px;
+    margin-left: 12px;
+    font-size: x-small;
+    color: cadetblue;
+    font-size: smaller;
+   }
+
+   .highlight{
+     background: mediumpurple;
+   }
+
+   .highlightClass{
+    background: mediumpurple;
+    border-radius: 12px;
+    border: 0.5px solid lightslategrey;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* ProfileEditorComponent's private CSS styles */
+/* :host {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+*/
+label {
+  display: block;
+  width: 6em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+input {
+  height: 1.3em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+
+button {
+  font-family: Arial;
+  background-color: #cbc1d89c;
+  border: none;
+  padding: 5px 10px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cbc1d8;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+.subgroup{
+  width: 95%;
+  margin: 4px 0px 4px 0px;
+  background: #8a8a6226;
+  border-radius: 2px;
+  border: 0.5px solid lightslategrey;
+}
+
+.subgroupPadding{
+  padding: 5px 5px 5px 10px;
+  box-shadow: 3px 0px 10px 2px lightslategrey;
+}
+
+.left-nav{
+  float: left;width: 100%;height: 91vh;overflow-y: scroll;overflow-x: hidden;
+}
+
+.logo{
+  float: left;
+width: 78%;
+height: 44vh;
+margin: 0.2% 1% 0% 1%;
+}
+
+.logo-border{
+  border: 0.5px solid grey;
+position: absolute;
+width: 67px;
+height: 67px;
+padding: 8px;
+box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.53);
+border-radius: 10px;
+top: 11%;
+left: 22%;
+}
+
+.logo-tag{
+  position: absolute;
+  margin-top: 25px;
+  font-size: 9px;
+  margin-left: 1px;
+  font-weight: 500;
+  font-family: inherit;
+  max-width: 30px;
+}
+
+.logo-image{
+  width: 49px;
+  height: 25px;
+  position: absolute;
+}
+
+.component-list{
+  align-items: flex-end;
+    height: 100%;
+    border: 1px solid #80808033;
+    border-radius: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.component-elipsis{
+  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+}
+
+.create-project{
+  float: right;
+    bottom: 0;
+    margin: 0px 20px 20px 0px;
+    right: 0;
+    position: fixed;
+}
+
+.create-project-btn{
+  background: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}

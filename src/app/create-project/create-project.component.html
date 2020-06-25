@@ -1,0 +1,199 @@
+<div class="header">
+    <div class="deloitte-log">
+      <img class="logoImage" style="height: 45px;" id="companyLogo" src="../../assets/us-deloitte-logo.png" alt="Deloitte">
+    </div>
+  </div>
+  
+  <div style="width:20%; padding-top:54px">
+    <div class="left-nav">
+      <div class=" buttonContainer">
+        <button class="example-box" (click)="addComponent()" style="min-width:100%;">Add Components</button>
+        <button class="example-box" (click)="addApplicaiton()" style="min-width:100%;">Add Application</button>
+      </div>
+      <div *ngIf="componentFlag && component" style="padding: 2px 0px 5px 7px;background: #d1dce6;">
+        <form [formGroup]="component" (ngSubmit)="onSubmit(component)">
+          <label class="level">
+            Artifactid:
+            <input type="text" formControlName="artifactid" required class="inputCss">
+          </label>
+  
+          <label class="level">
+            Groupid:
+            <input type="text" formControlName="groupid" required class="inputCss">
+          </label>
+  
+          <label class="level">
+            Version:
+            <input type="text" formControlName="version" required class="inputCss">
+          </label>
+          <div formArrayName="dependencies">
+            <h6>Dependencies</h6> <button (click)="addComponentDependencies(component)" style="background-color: #007cbb;
+            padding: 1px 6px;
+            border-radius: 2px;">Add</button>
+              <div *ngFor="let address of componentDependencies.controls; let i=index" formGroupName="{{i}}" class="subgroup">
+                <div class="subgroupPadding">
+                <label class="level">
+                  Artifactid:
+                  <input type="text" formControlName="artifactid" required class="inputCssDependencies">
+                </label>
+  
+                <label class="level">
+                  Groupid:
+                  <input type="text" formControlName="groupid" required class="inputCssDependencies">
+                </label>
+  
+                <label class="level">
+                  Version:
+                  <input type="text" formControlName="version" required class="inputCssDependencies">
+                </label>
+                </div>  
+              </div>
+          </div>
+  
+          <div formArrayName="component_dependencies">
+            <h6>Component Dependencies</h6> <button (click)="addComponentInternalDependencies(component)" style="background-color: #007cbb;
+            padding: 1px 6px;
+            border-radius: 2px;">Add</button>
+            <div>
+              <div *ngFor="let address of componentInternalDependencies.controls; let i=index" formGroupName="{{i}}" class="subgroup">
+              <div class="subgroupPadding">
+                <label class="level">
+                  component_artifactid:
+                  <input type="text" formControlName="component_artifactid" required class="inputCssDependencies">
+                </label>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <button type="submit" style="margin: 10px 86px;" [disabled]="!component.valid">Save</button>
+        </form>
+  
+      </div>
+  
+  
+      <div *ngIf="applicationFlag && application" style="padding: 2px 0px 5px 7px;background: #d1dce6;">
+        <form [formGroup]="application" (ngSubmit)="onSubmitApplication(application)">
+          <div class="">
+              <label class="level">
+                  Artifactid:
+                  <input type="text" formControlName="artifactid" required class="inputCss">
+                </label>
+        
+                <label class="level">
+                  Groupid:
+                  <input type="text" formControlName="groupid" required class="inputCss">
+                </label>
+        
+                <label class="level">
+                  Version:
+                  <input type="text" formControlName="version" required class="inputCss">
+                </label>
+          </div>
+  
+          <div formArrayName="resources">
+            <h6>Resources</h6> <button (click)="addApplicationResources(application)" style="background-color: #007cbb;
+            padding: 1px 6px;
+            border-radius: 2px;">Add</button>
+            <div *ngFor="let address of applicationResources.controls; let i=index" formGroupName="{{i}}" class="subgroup">
+              <div class="subgroupPadding">
+                  <label class="level">
+  
+                      <input type="text" placeholder="key" formControlName="key" required class="inputCssDependencies">
+                    </label>
+                    <label class="level">
+        
+                      <input type="text" placeholder="value" formControlName="value" required class="inputCssDependencies">
+                    </label>
+              </div>
+  
+            </div>
+  
+          </div>
+          <div formArrayName="dependencies">
+            <h6>Dependencies</h6> <button (click)="addApplicationDependencies(application)" style="background-color: #007cbb;
+            padding: 1px 6px;
+            border-radius: 2px;">Add</button>
+            <div>
+              <div *ngFor="let address of applicationDependencies.controls; let i=index" formGroupName="{{i}}" class="subgroup">
+                <div class="subgroupPadding">
+                <label class="level">
+                  Artifactid:
+                  <input type="text" formControlName="artifactid" required class="inputCssDependencies">
+                </label>
+  
+                <label class="level">
+                  Groupid:
+                  <input type="text" formControlName="groupid" required class="inputCssDependencies">
+                </label>
+  
+                <label class="level">
+                  Version:
+                  <input type="text" formControlName="version" required class="inputCssDependencies">
+                </label>
+                </div>  
+              </div>
+            </div>
+          </div>
+  
+          <div formArrayName="component_dependencies">
+            <h6>Add Component Dependencies</h6> <button
+              (click)="addApplicationInternalDependencies(component)" style="background-color: #007cbb;
+              padding: 1px 6px;
+              border-radius: 2px;">Add</button>
+            <div>
+              <div *ngFor="let address of applicationInternalDependencies.controls; let i=index" formGroupName="{{i}}" class="subgroup">
+                <div class="subgroupPadding">
+                <label class="level">
+                  component_artifactid:
+                  <input type="text" formControlName="component_artifactid" required class="inputCssDependencies">
+                </label>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <button type="submit" style="margin: 10px 86px;" [disabled]="!application.valid">Save</button>
+        </form>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="logo">
+  <div class="logo-border">
+    <img src="../assets/ship.PNG" class="logo-image">
+    <span class="logo-tag">Application Continuum</span>
+  </div>
+  
+    <div style="height: 100%;">
+      <div class="component-list">
+        <form [formGroup]="componentList" class="example-box-right"
+          *ngFor="let item of componentList.controls;let i=index" [ngClass]="{'highlight': highlight(i)}"
+          (click)="clickComponent(i)">
+          <div class="closeIcon" (click)="closeItem(i)">X</div>
+          <div (click)="clickComponent(i)" class="component-elipsis">
+            {{item.value.artifactid}}</div>
+        </form>
+  
+      </div>
+    </div>
+  
+    <div style="margin-top:35px">
+      <form [formGroup]="applicationList" class="truckContainer" [class.highlightClass]="selectedItem == i"
+        *ngFor="let app of applicationList.controls;let i=index" (dblclick)="onRightClick(i)"
+        (click)="clickApplication(i);selectedItem=i">
+        <div class="close" (click)="closeApplication(i)">X</div>
+        <div class="application-level">
+          {{app.artifactid}}
+        </div>
+        <i class="material-icons truck-icon">
+          local_shipping
+        </i>
+      </form>
+  
+      <div class="create-project">
+          <button class="btn btn-primary" (click)="createProject(project)" style="background-color: #007cbb;width:100%;"> Create Project</button>
+      </div>
+  
+      <!-- right bottom -->
+    </div>
+  </div>
